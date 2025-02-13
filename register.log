@@ -1,0 +1,36 @@
+2025-02-13 12:49:31,560 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:49:31,561 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:49:31,561 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:49:53,926 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:49:53,927 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:49:53,928 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:51:55,362 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:51:55,364 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:51:55,365 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:54:19,513 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:54:19,514 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:54:19,514 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:54:19,515 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 6 unidades en stock
+2025-02-13 12:54:19,515 - ERROR - Error: No hay suficiente cantidad del producto Portatil. El stock disponible es de 6
+2025-02-13 12:54:19,515 - ERROR - Error al efectuar la compra: Error: No hay suficiente cantidad del producto Portatil. El stock disponible es de 6
+2025-02-13 12:54:54,236 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:54:54,238 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:54:54,238 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:54:54,239 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 6 unidades en stock
+2025-02-13 12:54:54,239 - WARNING - Producto fuera de stock
+2025-02-13 12:55:08,548 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:55:08,549 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:55:08,550 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:55:08,550 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 6 unidades en stock
+2025-02-13 12:55:08,550 - WARNING - Producto fuera de stock
+2025-02-13 12:56:37,320 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:56:37,321 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:56:37,322 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:56:37,322 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 6 unidades en stock
+2025-02-13 12:56:37,323 - WARNING - Producto fuera de stock
+2025-02-13 12:57:01,321 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-13 12:57:01,322 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-13 12:57:01,322 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-13 12:57:01,323 - DEBUG - Producto Teclado agregado con éxito. El precio es de 50 - Cantidad: 5 unidades en stock
+2025-02-13 12:57:01,323 - ERROR - Error: No hay suficiente cantidad del producto Teclado. El stock disponible es de 5
+2025-02-13 12:57:01,324 - ERROR - Error al efectuar la compra: Error: No hay suficiente cantidad del producto Teclado. El stock disponible es de 5
