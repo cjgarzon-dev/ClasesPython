@@ -1,0 +1,6 @@
+2025-02-18 13:45:35,027 - DEBUG - Producto Portatil agregado con éxito. El precio es de 1000 - Cantidad: 10 unidades en stock
+2025-02-18 13:45:35,028 - INFO - La compra fué exitosa. El stock restante es 6
+2025-02-18 13:45:35,028 - INFO - Compra realizada: 4 unidades de Portatil por un total de $4000
+2025-02-18 13:45:35,029 - DEBUG - Producto Teclado agregado con éxito. El precio es de 50 - Cantidad: 5 unidades en stock
+2025-02-18 13:45:35,029 - ERROR - Error: No hay suficiente cantidad del producto Teclado. El stock disponible es de 5
+2025-02-18 13:45:35,029 - ERROR - Error al efectuar la compra: Error: No hay suficiente cantidad del producto Teclado. El stock disponible es de 5

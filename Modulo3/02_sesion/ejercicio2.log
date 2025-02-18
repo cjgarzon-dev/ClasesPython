@@ -1,0 +1,9 @@
+2025-02-18 13:45:44,186 - INFO - Iniciando el proceso de facturación para el cliente Carlos
+2025-02-18 13:45:44,186 - INFO - Factura procesada con éxito. Precio total de la compra $3000.5 - Cliente: Carlos
+2025-02-18 13:45:44,187 - INFO - El proceso de facturación para el cliente Carlos finalizó
+2025-02-18 13:45:44,187 - INFO - Iniciando el proceso de facturación para el cliente Pedro
+2025-02-18 13:45:44,188 - INFO - Factura procesada con éxito. Precio total de la compra $500 - Cliente: Pedro
+2025-02-18 13:45:44,188 - INFO - El proceso de facturación para el cliente Pedro finalizó
+2025-02-18 13:45:44,188 - INFO - Iniciando el proceso de facturación para el cliente Pedro
+2025-02-18 13:45:44,189 - INFO - Factura procesada con éxito. Precio total de la compra $500 - Cliente: Pedro
+2025-02-18 13:45:44,189 - INFO - El proceso de facturación para el cliente Pedro finalizó
