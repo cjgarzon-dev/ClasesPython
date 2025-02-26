@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Modulo3/05sesion/01proyecto/src"
+    ]
+}
