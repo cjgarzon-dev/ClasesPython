@@ -35,11 +35,11 @@ def calculate_total(list_products):
         total += product['price']
     return total
 
-def add_products(id_product, cant, list_prodcuts):
+def add_products(id_product, cant, list_products):
     """Agregar un producto a la lista de compra y registrar una venta"""
     product = get_product(id_product)
     if product:
-        list_prodcuts.append({'name': product['name'], 'price': product['price'] * cant})
+        list_products.append({'name': product['name'], 'price': product['price'] * cant})
         
         # REGISTRAR UNA VENTA EN EL HISTORIAL
         history_sales.append({
@@ -48,4 +48,4 @@ def add_products(id_product, cant, list_prodcuts):
             'price_total' : product['price'] * cant
         })
     else:
-        raise ValueError(f'Producto con ID {id_product} no encontradp')
+        raise ValueError(f'Producto con ID {id_product} no encontrado')
