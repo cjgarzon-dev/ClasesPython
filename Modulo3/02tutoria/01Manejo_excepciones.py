@@ -47,3 +47,22 @@ try:
 except (ValueError, ZeroDivisionError) as e:
     print(f'Error: {e}')
 
+#* CREACION DE EXCEPCIONES PERSONALIZADAS
+
+class MyException(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+    
+try:
+    age = int(input('Ingrese su edad: '))
+    if age < 0:
+        raise MyException('La edad no puede ser negativa')
+    print(f'SU edad es {age}')
+except MyException as e:
+    print(f'Error: {e}')
+
+#! RECOMENDACIONES
+# Use las excepciones sólo para situaciones excepcionales, no como lógica de control
+# Siempre usar el 'finally' para liberar recursos
+# Se especifica al capturar el error
+# Documentar los procesos
