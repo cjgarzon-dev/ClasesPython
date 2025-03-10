@@ -1,0 +1,3 @@
+
+def manage_exceptions(exception):
+    print(f'Error {exception}')
