@@ -50,6 +50,15 @@ for key, product in products.items():
 
 treeview_products.pack(pady=10)
 
+# Frame para la cantidad y el boton
+frame_cant = tk.Frame(frame_principal, bg='#f4f4f9')
+frame_cant.grid(row=1, column=1, padx=10, pady=10)
 
+# Campo para la cantidad
+tag_cant = tk.Label(frame_cant, text= 'Cantidad', font= ('Arial', 14), bg= '#f4f4f9')
+tag_cant.pack(pady=10)
 
+for p in products.items():
+    print(p)
+    
 root.mainloop()
