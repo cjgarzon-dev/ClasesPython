@@ -8,13 +8,14 @@ class ViewStore:
         self.root.title('Caja Registradora - Tienda Fruver')
         self.configure_interfaz()
         self.load_products()
-        self.root_mainloop()
+        self.root.mainloop()
     
     def configure_interfaz(self):
         self.treeview_products = ttk.Treeview(self.root, columns=('Products', 'Price', 'Cant_Available'), show='headings', height=10)
         self.treeview_products.heading('Products', text='Producto')
         self.treeview_products.heading('Price', text='Precio')
         self.treeview_products.heading('Cant_Available', text='Cantidad Disponible')
+        self.treeview_products.pack()
 
         self.entry_cant = tk.Entry(self.root)
         self.entry_cant.pack()
@@ -26,7 +27,7 @@ class ViewStore:
         self.button_finalice.pack()
     
     def load_products(self):
-        for id_product, product in self.controller.obtain_product().items():
+        for id_product, product in self.controller.obtain_products().items():
             self.treeview_products.insert('', 'end', iid= str(id_product), values= (product.name, product.price, product.stock))
     
     def add_products(self):
@@ -39,3 +40,9 @@ class ViewStore:
         except:
             messagebox.showerror('Error')
     
+    def update_view_product(self):
+        for item in self.treeview_products.get_children():
+            self.treeview_products.delete(item)     # Limpiar la tabla
+        
+        for id_product, product in self.controller.obtain_products().item():
+            self.treeview_products.insert('', 'end', iid= str(id_product), values=(product.name, product.price, product.stock))

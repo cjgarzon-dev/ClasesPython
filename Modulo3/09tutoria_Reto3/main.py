@@ -1,12 +1,15 @@
-from model.model import Store
-from controller.controller import ControllerStore
-from view.view import ViewStore
+from Model.model import Store
+from Controller.controller import ControllerStore
+from View.view import ViewStore
 
-model = Store()
-model.add_products(1, 'Manzana', 1, 100)
-model.add_products(1, 'Pera', 2, 100)
-model.add_products(1, 'Mango', 3, 100)
+if __name__ == '__main__':
+    model = Store()
+    model.add_products(1, 'Manzana', 1, 100)
+    model.add_products(2, 'Pera', 2, 100)
+    model.add_products(3, 'Mango', 3, 100)
 
-controller = ControllerStore(model, None)
+    controller = ControllerStore(model, None)
 
-view = ViewStore(controller)
+    view = ViewStore(controller)
+    
+    controller.view = view

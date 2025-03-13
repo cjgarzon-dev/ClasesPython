@@ -21,7 +21,7 @@ class Store:
     def obtain_product(self, id_product):
         return self.products.get(id_product)
     
-    def register_sales(self, id_product, cant):
+    def register_sale(self, id_product, cant):
         product = self.obtain_product(id_product)
         
         if product:
