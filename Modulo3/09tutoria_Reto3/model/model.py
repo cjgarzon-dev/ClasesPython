@@ -23,7 +23,7 @@ class Store:
     
     def register_sale(self, id_product, cant):
         product = self.obtain_product(id_product)
-        
+        print(f'Hola {product['name']}')
         if product:
             product.reduce_stock(cant)
             total = product.price * cant
