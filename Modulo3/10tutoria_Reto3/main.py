@@ -95,7 +95,7 @@ class View():
         self.list_product = tk.Listbox(root)
         for prod in self.controller.obtain_product():
             self.list_product.insert(tk.END, prod)
-        self.list_product.grid(row=0, column=0)
+        self.list_product.pack()
         
         self.list_cart = tk.Listbox(frame)
         self.list_cart.grid(row=0, column=1)
