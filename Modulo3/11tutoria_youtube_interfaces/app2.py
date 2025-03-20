@@ -13,6 +13,7 @@ def change_theme():
     tag_theme_actual.config(text=f'Tema actual: {new_theme}')
 
 def show_message():
+    '''Muestra el mensaje basado en el texto ingresado'''
     text = tag_entry.get()
     if not text:
         text = 'Hola TTKBoostrap'
@@ -36,7 +37,7 @@ def show_message():
     
 app = ttk.Window(themename='darkly')
 app.title('Demo Básica de TTKBoostrap')
-app.geometry('600x500')
+app.geometry('700x800')
 app.resizable(True, True)
 
 # Crear un frame principal
@@ -72,5 +73,36 @@ tag_entry.pack(side=LEFT, padx=5, fill=X, expand=YES)
 # Añadir boton para mostrar mensaje al usuario
 button_message = ttk.Button(frame_entry, text='Mostrar', bootstyle='success', command=show_message)
 button_message.pack(side=LEFT, padx=5)
+
+# Crear un frame para los botones de demostración
+frame_buttons = ttk.LabelFrame(frame_principal, text='Estilo de Botones', padding=10)
+frame_buttons.pack(fill=X, pady=20)
+
+# Añadir botones con diferentes estilos
+styles = ['primary', 'secondary', 'success', 'danger', 'warning', 'info']
+for style in styles:
+    ttk.Button(frame_buttons, text=style.capitalize(), bootstyle=style).pack(side=LEFT, padx=5, pady=10)
+
+# Crear un frame para los controles
+frame_controls = ttk.LabelFrame(frame_principal, text='Otros Controles', padding=10)
+frame_controls.pack(fill=X, pady=10)
+
+# Añadir una barra de progreso
+progress = ttk.Progressbar(frame_controls, bootstyle='success-striped', value=75)
+progress.pack(fill=X, pady=10)
+
+# Añadir un control deslizante
+ttk.Scale(frame_controls, from_=0, to=100, value=75, command=lambda val: progress.config(value=float(val))).pack(fill=X, pady=10)
+
+# Añadir casillas de verificación
+frame_check = ttk.Frame(frame_controls)
+frame_check.pack(fill=X, pady=10)
+
+for i, text in enumerate(['Opción 1', 'Opción 2', 'Opción 3']):
+    ttk.Checkbutton(frame_check, text=text, bootstyle=styles[i % len(style)]).pack(side=LEFT, padx=10)
+
+# Añadir un pie de página
+footer = ttk.Label(app, text='TTK Boostrap - Interfaces modernas para Python', bootstyle='inverse-secondary')
+footer.pack(side=BOTTOM, fill=X, pady=5)
 
 app.mainloop()
