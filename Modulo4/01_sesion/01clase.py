@@ -10,7 +10,7 @@ print(employees)
 #print(employees)
 
 ## Set (conjuntos) en python
-categories = {'Terror', 'Drama', 'ScFc'}
+categories = {'Terror', 'Drama', 'ScFc'}    #No permite valores duplicados
 categories.add('Suspenso')
 print(categories)
 
