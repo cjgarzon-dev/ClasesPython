@@ -13,8 +13,6 @@ products = {
     'XML0133': {'name': 'Mango', 'price': 3100},
     'XML0134': {'name': 'Papaya', 'price': 2900},
     'XML0135': {'name': 'Limón', 'price': 1700},
-    'XML0136': {'name': 'Coco', 'price': 3500},
-    'XML0137': {'name': 'Mandarina', 'price': 2000}
 }
 
 print(products['XML0123'])
