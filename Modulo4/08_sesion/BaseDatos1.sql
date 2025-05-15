@@ -33,9 +33,13 @@ DELETE FROM estudiantes WHERE id = 2;
 CREATE TABLE profesores(
 id INT PRIMARY KEY AUTO_INCREMENT,
 nombre VARCHAR(100),
-especialidad VARCHAR(100),
+espacialidad VARCHAR(100),
 experiencia INT
 );
+
+# Modificar una tabla una vez ya creada
+ALTER TABLE profesores CHANGE
+	COLUMN espacialidad especialidad VARCHAR(100);
 
 # Insertar diez registros de profesores y estudiantes
 INSERT INTO profesores(nombre, especialidad, experiencia) VALUES
@@ -71,3 +75,13 @@ UPDATE profesores SET especialidad = 'Programacion' WHERE id = 5;
 
 # Eliminar un registro
 DELETE FROM profesores WHERE id = 3;
+
+# Agregar una columna a tabla existente y una foreign key
+ALTER TABLE estudiantes 
+	ADD COLUMN curso_id INT,
+	ADD FOREIGN KEY (curso_id) REFERENCES cursos(id_cursos);
+
+# Consulta personalizada
+SELECT estudiantes.nombre, cursos.nombre AS curso
+FROM estudiantes
+JOIN cursos ON estudiantes.curso_id = cursos.id_cursos
