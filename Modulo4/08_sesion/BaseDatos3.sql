@@ -57,14 +57,14 @@ INSERT INTO products (name_product, price_product, stock_product) VALUES
 
 INSERT INTO sales (cant_sale, date_sale, total_sale, id_client, id_product) VALUES
 	(1, '2025-05-01', 2500.00, 1, 1),
-	(2, '2025-05-02', 91.98, 2, 2),
+	(2, '2025-05-02', 91.98, 1, 2),
 	(1, '2025-05-03', 120.50, 3, 3),
 	(1, '2025-05-04', 300.00, 4, 4),
-	(3, '2025-05-05', 257.25, 5, 5),
-	(5, '2025-05-06', 100.00, 6, 6),
-	(1, '2025-05-07', 150.00, 7, 7),
+	(3, '2025-05-05', 257.25, 10, 5),
+	(5, '2025-05-06', 100.00, 1, 6),
+	(1, '2025-05-07', 150.00, 3, 7),
 	(2, '2025-05-08', 1200.00, 8, 8),
-	(2, '2025-05-09', 150.00, 9, 9),
+	(2, '2025-05-09', 150.00, 3, 9),
 	(1, '2025-05-10', 55.00, 10, 10);
 
 # Realizar consulta con JOIN (consulta general)
@@ -78,3 +78,10 @@ SELECT c.name_client AS Cliente, p.name_product AS Producto, s.cant_sale AS Cant
 FROM sales AS s
 JOIN clients AS c ON s.id_client = c.id_client
 JOIN products AS p ON s.id_product = p.id_product;
+
+# Consulta de clientes que mas compran y total
+SELECT c.name_client, SUM(s.total_sale) AS Total_Venta
+FROM sales AS s
+JOIN clients AS c ON s.id_client = c.id_client
+JOIN products AS p ON s.id_product = p.id_product
+GROUP BY c.name_client;
