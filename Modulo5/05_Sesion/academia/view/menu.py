@@ -5,17 +5,22 @@ def menu_principal(db):
 
     estudiante_control = EstudianteControl(db)
 
-    print("Bienvenido a la Academia")
-    print("1. Registrar Estudiante")
-    print("2. Salir") 
-    opcion = input("Seleccione una opción: ")
+    while True:
+        print("Bienvenido a la Academia")
+        print("1. Registrar Estudiante")
+        print("2. Listar Estudiantes")
+        print("3. Salir") 
+        opcion = input("Seleccione una opción: ")
 
-    if opcion == '1':
-        registrar_estudiante(estudiante_control)
-    elif opcion == '2':
-        print("Saliendo del programa.")
-    else:
-        print("Opción no válida. Intente de nuevo.")
+        if opcion == '1':
+            registrar_estudiante(estudiante_control)
+        elif opcion == '2':
+            listar_estudiantes(estudiante_control)
+        elif opcion == '3':
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción no válida. Intente de nuevo.")
     
 def registrar_estudiante(estudiante_control):
     print("+++++++++++++ Registrar Estudiante +++++++++++++")
@@ -34,3 +39,16 @@ def registrar_estudiante(estudiante_control):
         print("++++++++++++++++++++++++++++++++++++++++++++++")
         print("Registro de estudiante finalizado.")
         menu_principal(estudiante_control.db)
+
+def listar_estudiantes(estudiante_control):
+    print("+++++++++++++ Listar Estudiantes +++++++++++++")
+    try:
+        estudiantes = estudiante_control.listar_estudiantes()
+        if estudiantes:
+            print("ID | Nombre | Apellido | Correo Electrónico | Teléfono")
+            for est in estudiantes:
+                print(f"{est.id_estudiante} | {est.nombre} | {est.apellido} | {est.correo_electronico} | {est.telefono}")
+        else:
+            print("No hay estudiantes registrados.")
+    except Exception as e:
+        print(f"Error al listar los estudiantes: {str(e)}")

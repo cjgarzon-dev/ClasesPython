@@ -1,4 +1,5 @@
 from config.database import DatabaseConexion
+from models.estudiantes import Estudiante
 
 class EstudianteControl:
 
@@ -11,6 +12,12 @@ class EstudianteControl:
             VALUES (%s, %s, %s, %s)
         """
         parametros = (nombre, apellido, correo_electronico, telefono)
-        self.db.ejecutar_sql(sql, parametros)
+        self.db.execute_sql(sql, parametros)
 
+    def listar_estudiantes(self):
+        sql = """
+            SELECT id_estudiante, nombre, apellido, correo_electronico, telefono FROM Estudiantes
+        """
+        resultados = self.db.execute_select(sql)
+        return [Estudiante(*resultado) for resultado in resultados]
         
